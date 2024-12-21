@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de cantidad de billetes de G 20000 para cubrir un monto.</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ingrese el monto</h1>
+        <form action="/" method="post">
+            <label for="Monto">Monto:</label>
+            <input type="number" id="monto" name="monto" step="1" required>
+            <button type="submit">Calcular</button>
+        </form>
+        {% if msg %}
+            <div class="resultado">
+                <h2>{{ mensaje }}</h2>
+            </div>
+        {% else %}
+            <div class="resultado">
+                <h2>{{ mensaje }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

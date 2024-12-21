@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de mayor&iacute;a de edad.</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ingrese su edad</h1>
+        <form action="/" method="post">
+            <label for="Edad">Edad:</label>
+            <input type="number" id="edad" name="edad" step="1" required>
+            <button type="submit">Calcular</button>
+        </form>
+        {% if msg %}
+            <div class="resultado">
+                <h2>{{ mensaje }}</h2>
+            </div>
+        {% else %}
+            <div class="resultado">
+                <h2>{{ mensaje }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
