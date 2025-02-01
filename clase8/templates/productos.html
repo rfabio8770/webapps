@@ -1,0 +1,29 @@
+<!-- templates/productos.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+        </tr>
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto[0] }}</td>
+            <td>{{ producto[1] }}</td>
+            <td>{{ producto[2] }}</td>
+            <td>{{ producto[3] }}</td>
+            <td>{{ producto[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

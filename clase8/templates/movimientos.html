@@ -1,0 +1,29 @@
+<!-- templates/movimientos.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movimientos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Lista de Movimientos</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Tipo</th>
+            <th>Cantidad</th>
+            <th>Fecha</th>
+        </tr>
+        {% for movimiento in movimientos %}
+        <tr>
+            <td>{{ movimiento[0] }}</td>
+            <td>{{ movimiento[1] }}</td>
+            <td>{{ movimiento[2] }}</td>
+            <td>{{ movimiento[3] }}</td>
+            <td>{{ movimiento[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

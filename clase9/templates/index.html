@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+	Primera Página
+{% endblock %}
+
+{% block body %}
+	<form action="{{ url_for('otro') }}" method="POST">
+		<input type="text" name="name" placeholder="Ingrese su nombre">
+		<select name="ciudad" id="ciudad">
+			<option value="Asunción">Asunción</option>
+			<option value="San Lorenzo">San Lorenzo</option>
+			<option value="Luque">Luque</option>
+		</select>
+		<button>Enviar</button>
+	</form>
+{% endblock %}
