@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if titulo %}
+        <title>{{ titulo }} - Condicionales y Repetitivas </title>
+    {% else %}
+        <title>Bienvenido Condicionales y Repetitivas </title>
+    {% endif %}
+</head>
+<body>
+    <h1>Hola, {{ user.username }}! </h1>
+    {% for post in posts %}
+        <div><p> {{ post.autor.username  }} comentó: <b>{{ post.body }}</b>  </p> </div>
+    {% endfor %}
+</body>
+</html>
+

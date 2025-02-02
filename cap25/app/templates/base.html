@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if titulo %}
+        <title>{{ titulo }} Herencia en Templates</title>
+    {% else %}
+        <title>Herencia en Templates</title>
+    {% endif %}
+</head>
+<body>
+    <div>Proyecto Herencia de templates: <a href="/index">Home</a></div>
+    <hr>
+    {% block content %} {%endblock%}
+</body>
+
+</html>
