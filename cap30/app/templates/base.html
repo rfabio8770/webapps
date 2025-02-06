@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if titulo %}
+        <title>{{ titulo }} Formularios</title>
+    {% else %}
+        <title>Formularios</title>
+    {% endif %}
+</head>
+<body>
+    <div>Proyecto Formularios en Flask: 
+        <a href="/index">Home</a>
+        <a href="/login">Iniciar sesión</a>
+    </div>
+    <hr>
+    {% block content %} {%endblock%}
+</body>
+
+</html>
