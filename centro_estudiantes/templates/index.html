@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Actividades del Centro de Estudiantes</h1>
+<ul>
+    {% for actividad in actividades %}
+        <li>{{ actividad.titulo }} - {{ actividad.descripcion }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

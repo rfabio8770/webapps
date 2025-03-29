@@ -1,0 +1,28 @@
+body {
+    max-width: 640px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    
+}
+h1 {
+    background-color: blue;
+    color: white
+}
+nav {
+    background-color: sandybrown;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 30px;
+}

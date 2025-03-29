@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Estudiantes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+            <li><img src="{{ url_for('static', filename='sanjose.jpg') }}" alt="image de San José" class="logo"></li>
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('crear_actividad') }}">Crear Actividad</a> </li>
+            <li><a href="{{ url_for('logout') }}">Cerrar Sesión</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login') }}">Iniciar Sesión</a></li>
+            <li><a href="{{ url_for('register') }}">Registrarse</a></li>
+        {% endif %}
+    </ul>
+    </nav>
+    <main>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
