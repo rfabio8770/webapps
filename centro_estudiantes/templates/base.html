@@ -9,7 +9,7 @@
 <body>
     <nav>
         <ul id="menu">
-            <li><img src="{{ url_for('static', filename='sanjose.jpg') }}" alt="image de San José" class="logo"></li>
+            <li><img src="{{ url_for('static', filename='tecno.png') }}" alt="image de San José" class="logo"></li>
         <li><a href="{{ url_for('index') }}">Inicio</a></li>
         {% if current_user.is_authenticated %}
             <li><a href="{{ url_for('crear_actividad') }}">Crear Actividad</a> </li>

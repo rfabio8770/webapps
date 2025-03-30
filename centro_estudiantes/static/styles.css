@@ -2,10 +2,11 @@ body {
     max-width: 640px;
     margin: auto;
     font-family: Arial, sans-serif;
-    
+    background-color: beige;
 }
-h1 {
+h1, h2 {
     background-color: blue;
+    padding: 10px;
     color: white
 }
 nav {
@@ -16,13 +17,26 @@ nav {
 }
 nav ul {
     display: flex;
-    justify-content: space-around;
+    /*justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     padding: 10px;
 }
 
 .logo {
     display: block;
-    margin: 20px auto;
-    width: 30px;
+    max-width: 50%;
+    height: auto;
 }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
